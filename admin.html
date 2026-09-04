@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine General Store — Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="nav">
+    <a class="brand" href="index.html">
+      VALENTINE
+      <small>GENERAL STORE</small>
+    </a>
+  </header>
+
+  <main class="section">
+
+    <div id="loginSection">
+      <div class="section-title">
+        <span>✦</span>
+        <h2>ADMIN LOGIN</h2>
+        <span>✦</span>
+      </div>
+
+      <form id="loginForm" class="admin-form">
+
+        <label>
+          Email
+          <input
+            type="email"
+            id="email"
+            required
+            autocomplete="email"
+          >
+        </label>
+
+        <label>
+          Password
+          <input
+            type="password"
+            id="password"
+            required
+            autocomplete="current-password"
+          >
+        </label>
+
+        <button class="cta" type="submit">
+          SE CONNECTER
+        </button>
+
+        <p id="loginError"></p>
+
+      </form>
+    </div>
+
+    <div id="dashboard" hidden>
+
+      <div class="section-title">
+        <span>✦</span>
+        <h2>COMMANDES</h2>
+        <span>✦</span>
+      </div>
+
+      <div class="admin-actions">
+        <button id="refreshOrders" class="cta">
+          ACTUALISER
+        </button>
+
+        <button id="logout" class="cta">
+          DÉCONNEXION
+        </button>
+      </div>
+
+      <div id="ordersContainer">
+        <p>Chargement des commandes...</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>

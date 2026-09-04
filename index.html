@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Valentine General Store</title>
+
+  <meta name="description" content="Valentine General Store — vêtements, football et accessoires au Maroc.">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <div>🚚 LIVRAISON PARTOUT AU MAROC</div>
+
+    <div>♡ PAIEMENT À LA LIVRAISON</div>
+
+    <div>☎ SERVICE CLIENT</div>
+
+  </header>
+
+  <nav class="nav">
+
+    <button class="menu" aria-label="Menu">☰ <span>MENU</span></button>
+
+    <a class="brand" href="#home">
+
+      VALENTINE
+
+      <small>GENERAL STORE</small>
+
+    </a>
+
+    <div class="nav-icons">
+
+      <button aria-label="Recherche">⌕</button>
+
+      <button aria-label="Panier">♧</button>
+
+    </div>
+
+  </nav>
+
+  <main id="home">
+
+    <section class="hero">
+
+      <img src="welcome.png"
+
+           alt="Welcome to Valentine General Store"
+
+           class="hero-image">
+
+      <div class="hero-overlay">
+
+        <a href="#shop" class="cta">DÉCOUVRIR LA BOUTIQUE</a>
+
+      </div>
+
+    </section>
+
+    <section id="shop" class="section">
+
+      <div class="section-title">
+
+        <span>✦</span>
+
+        <h2>NOS PRODUITS</h2>
+
+        <span>✦</span>
+
+      </div>
+
+      <div class="filters">
+
+        <button class="filter active" data-category="all">TOUS</button>
+
+        <button class="filter" data-category="football">FOOTBALL</button>
+
+        <button class="filter" data-category="clothing">VÊTEMENTS</button>
+
+        <button class="filter" data-category="accessories">ACCESSOIRES</button>
+
+        <button class="filter" data-category="watches">MONTRES</button>
+
+      </div>
+
+      <div class="products" id="products"></div>
+
+    </section>
+
+    <section class="trust">
+
+      <div>
+
+        <strong>🚚</strong>
+
+        <span>LIVRAISON</span>
+
+        <small>Partout au Maroc</small>
+
+      </div>
+
+      <div>
+
+        <strong>💵</strong>
+
+        <span>PAIEMENT</span>
+
+        <small>À la livraison</small>
+
+      </div>
+
+      <div>
+
+        <strong>★</strong>
+
+        <span>SÉLECTION</span>
+
+        <small>Produits choisis avec soin</small>
+
+      </div>
+
+      <div>
+
+        <strong>♡</strong>
+
+        <span>VALENTINE</span>
+
+        <small>Une boutique différente</small>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-brand">
+
+      VALENTINE
+
+      <small>GENERAL STORE</small>
+
+    </div>
+
+    <p>© 2026 Valentine General Store — Tous droits réservés.</p>
+
+    <div class="social">
+
+      Instagram · TikTok · Facebook
+
+    </div>
+
+  </footer>
+
+  <div class="modal" id="orderModal" aria-hidden="true">
+
+    <div class="modal-card">
+
+      <button class="close" id="closeModal">×</button>
+
+      <p class="eyebrow">VALENTINE GENERAL STORE</p>
+
+      <h2>COMMANDER</h2>
+
+      <p id="selectedProduct"></p>
+
+      <form id="orderForm">
+
+        <label>
+
+          Nom complet
+
+          <input required name="name" autocomplete="name">
+
+        </label>
+
+        <label>
+
+          Téléphone
+
+          <input required name="phone" type="tel" autocomplete="tel">
+
+        </label>
+
+        <label>
+
+          Ville
+
+          <input required name="city" autocomplete="address-level2">
+
+        </label>
+
+        <label>
+
+          Adresse détaillée
+
+          <textarea required name="address" rows="3"></textarea>
+
+        </label>
+
+        <label>
+
+          Taille
+
+          <select name="size">
+
+            <option>S</option>
+
+            <option>M</option>
+
+            <option>L</option>
+
+            <option>XL</option>
+
+            <option>XXL</option>
+
+          </select>
+
+        </label>
+
+        <label>
+
+          Quantité
+
+          <input name="quantity" type="number" min="1" value="1">
+
+        </label>
+
+        <button class="cta submit" type="submit">
+
+          CONFIRMER LA COMMANDE
+
+        </button>
+
+      </form>
+
+      <div id="success" class="success" hidden>
+
+        Merci ! Votre demande de commande a été enregistrée.
+
+        Nous vous contacterons pour confirmation.
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
